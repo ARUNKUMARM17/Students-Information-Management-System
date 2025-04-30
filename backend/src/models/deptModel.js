@@ -5,6 +5,13 @@ const deptSchema=new Schema({
         type:String,
         required:true,
     },
+    students:[{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+    }],
 
+
+},{
+    timestamps:true,
 })
 export default mongoose.model("Dept",deptSchema);

@@ -16,8 +16,18 @@ const userSchema=mongoose.Schema({
     role:{
         type:String,
         required:true,
-        enum:["admin","student","teacher"],
+        enum:["admin","student","staff"],
+        default:"student",
     },
+    department:{
+        type:String,
+        required: function() {
+            return this.role !== 'admin'; // Required only for non-admin users
+          },
+      
+    },
+
+    
     
 
 
