@@ -5,14 +5,10 @@ export default studentDetailsSchema=new Schema(
             type:Schema.Types.ObjectId,
             ref:"user",
         },
-        rollno:{
+        name:{
             type:String,
             required:true,
-            unique:true,
-        },
-        department:{
-            type:Schema.Types.ObjectId,
-            ref:"Dept",
+            
         },
         Batch:{
             type:String,

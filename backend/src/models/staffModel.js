@@ -5,10 +5,6 @@ const staffSchema=new Schema({
         type:Schema.types.ObjectId,
         ref:"User",
     },
-    department:{
-        type:Schema.types.ObjectId,
-        ref:"Dept",
-    },
     courses:[{
         type:Schema.types.ObjectId,
         ref:"Course",
